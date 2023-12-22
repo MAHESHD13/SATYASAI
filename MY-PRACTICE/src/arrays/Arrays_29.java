@@ -1,4 +1,4 @@
-package com.arrays;
+package arrays;
 
 public class Arrays_29 
 {
