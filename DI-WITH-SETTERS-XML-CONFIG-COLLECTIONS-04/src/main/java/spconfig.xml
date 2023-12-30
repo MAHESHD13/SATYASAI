@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    
+    <bean class="com.sathya.Margin" id="marginBean">
+        <property name="marginId" value="101"/>
+        <property name="marginCode" value="ABCD"/>
+    </bean>
+
+   
+    <bean class="com.sathya.Model" id="modelBean">
+        <property name="modelId" value="1"/>
+        <property name="modelCode" value="XYZ"/>
+        <property name="modelCost" value="1000.0"/>
+        <property name="marginObjs">
+            <map>
+                <entry key="1" value-ref="marginBean"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean class="com.sathya.Product" id="productBean">
+        <property name="productId" value="123"/>
+        <property name="productName" value="SampleProduct"/>
+        <property name="modelObjs">
+            <list>
+                <ref bean="modelBean"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>
