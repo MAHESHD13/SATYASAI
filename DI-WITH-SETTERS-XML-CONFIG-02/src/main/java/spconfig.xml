@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+<bean class="com.sathya.MarginBean" id="id1">  
+	<property name="mrgId" value="45"/>
+	<property name="mrgCode" value="H1ASG"/>
+	  
+</bean> 
+
+<bean class="com.sathya.ModelBean" id="id2">
+	<property name="modelId" value="101"/>
+	<property name="modelCode" value="A1ADC143"/>
+	<property name="modelCost" value="9000.99"/>
+	<property name="mrgObj" ref="id1"/>
+</bean> 
+
+<bean class="com.sathya.ProductBean" id="id3">
+	<property name="proId" value="12"/>
+	<property name="proName" value="Laptop"/>
+	<property name="modelObj" ref="id2"/>
+	</bean>
+</beans>
