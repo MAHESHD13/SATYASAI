@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>product.html</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>PRODUCTINVOICESERVLET</display-name>
+    <servlet-name>PRODUCTINVOICESERVLET</servlet-name>
+    <servlet-class>com.mahesh.PRODUCTINVOICESERVLET</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PRODUCTINVOICESERVLET</servlet-name>
+    <url-pattern>/PRODUCTINVOICESERVLET</url-pattern>
+  </servlet-mapping>
+</web-app>
